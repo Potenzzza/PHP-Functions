@@ -1,0 +1,9 @@
+// Hide a part of an email
+function tftf_partially_hide_email( $email ){
+	
+    list($first, $last) = explode("@", $email);
+    $output = substr($first, 0, 2) . str_repeat('*', 6) . "@" . $last;
+	
+	return $output;
+	
+} 
